@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Blog Của Tôi</title>
+    <style>
+        *{
+            list-style: none;
+            text-decoration: none;
+        }
+    
+
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            z-index: 10;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .navbar a {
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeIn .3s ease-in-out forwards;
+            font-size: 1.5rem;
+            color: #000;
+            font-weight: 700;
+            max-width: 200px;
+            display: inline-flex;
+            align-items: center;
+
+            & img {
+                width: 30%;
+            }
+        }
+
+        .navbar-collapse .navbar-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 650px;
+            padding: 0.75rem 1rem;
+
+
+            & .nav-item {
+                opacity: 0;
+                transform: translateY(-50px);
+                animation: fadeIn .5s ease-out forwards;
+            }
+        }
+
+        .navbar-collapse .navbar-nav li a {
+            font-size: 1.05rem;
+            font-weight: 900;
+            color: #000;
+            transition: all .2s ease-in-out;
+
+            & i {
+                color: #000;
+            }
+        }
+
+        .navbar-nav a.active {
+            color: #F7444E;
+        }
+
+        .navbar-collapse .navbar-nav li a:hover {
+            color: #F7444E;
+            transition: all .2s ease-in-out;
+        }
+
+        .navbar-collapse .navbar-nav li a:not(:hover) {
+            color: black;
+            transition: all .5s ease-in-out;
+        }
+
+        .navbar-nav .nav-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .navbar-nav .nav-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .navbar-nav .nav-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .navbar-nav .nav-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .navbar-nav .nav-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .navbar-nav .nav-item:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .navbar-nav .nav-item:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .navbar-nav .nav-item:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tab-menu {
+            display: none;
+        }
+
+        .containers{
+            margin-top: 5rem;
+        }
+        .post {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post h2 {
+            margin-top: 0;
+        }
+
+        .post .date {
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a style="--1: 1" href="#" class="nav-item nav-bars">
+                    <img src="/TMDT/assets/Logo_nike.png" alt="" />
+                </a>
+                <div class="navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li style="--1: 2" class="nav-link nav-item active">
+                            <a href="/TMDT/Index.html">HOME</a>
+                        </li>
+                        <li style="--1: 3" class="nav-item">
+                            <a href="/TMDT/Product/About.html">ABOUT</a>
+                        </li>
+                        <li style="--1: 4" class="nav-item"><a href="/TMDT/Product/Products.html">PRODUCTS</a></li>
+                        <li style="--1: 5" class="nav-item"><a href="/TMDT/Product/Blog.html">BLOG</a></li>
+                        <li style="--1: 6" class="nav-item"><a href="#">CONTACT</a></li>
+                        <li style="--1: 7" class="nav-item">
+                            <a href="#" class="fa-solid fa-cart-shopping"></a>
+                        </li>
+                        <li style="--1: 8" class="nav-item search">
+                            <a href="#" class="fa-solid fa-magnifying-glass"></a>
+                        </li>
+                        <li style="--1: 8" class="nav-item search">
+                            <a href="#" class="fa-solid fa-user"></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Bars -->
+                <div class="tab-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <!-- ************ -->
+            </nav>
+        </div>
+
+
+    </header>
+
+    <div class="containers">
+        <div class="post">
+            <h2>Bài Viết 1: Chia Sẻ Chiếc giày </h2>
+            <p class="date">Ngày đăng: 03/04/2025</p>
+            <p>Chào các bạn! Trong bài viết này, tôi sẽ chia sẻ những kinh nghiệm du lịch thú vị và hữu ích. Hãy cùng
+                khám phá nhé!</p>
+        </div>
+
+        <div class="post">
+            <h2>Bài Viết 2: Những Điều Cần Biết Khi mua giày</h2>
+            <p class="date">Ngày đăng: 02/04/2025</p>
+            <p>Hôm nay tôi sẽ giới thiệu một số điều cần lưu ý khi mua laptop để bạn có thể chọn lựa sản phẩm phù hợp
+                nhất với nhu cầu của mình.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Blog của tôi - Tất cả quyền được bảo lưu</p>
+    </footer>
+</body>
+
+</html>
