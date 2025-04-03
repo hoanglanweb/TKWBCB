@@ -11,164 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="/TMDT/CSS/blog.css">
     <title>Blog Của Tôi</title>
-    <style>
-        *{
-            list-style: none;
-            text-decoration: none;
-        }
-    
-
-        header {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            background: #fff;
-            z-index: 10;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 10px;
-        }
-
-        .navbar a {
-            opacity: 0;
-            transform: translateY(-50px);
-            animation: fadeIn .3s ease-in-out forwards;
-            font-size: 1.5rem;
-            color: #000;
-            font-weight: 700;
-            max-width: 200px;
-            display: inline-flex;
-            align-items: center;
-
-            & img {
-                width: 30%;
-            }
-        }
-
-        .navbar-collapse .navbar-nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 650px;
-            padding: 0.75rem 1rem;
-
-
-            & .nav-item {
-                opacity: 0;
-                transform: translateY(-50px);
-                animation: fadeIn .5s ease-out forwards;
-            }
-        }
-
-        .navbar-collapse .navbar-nav li a {
-            font-size: 1.05rem;
-            font-weight: 900;
-            color: #000;
-            transition: all .2s ease-in-out;
-
-            & i {
-                color: #000;
-            }
-        }
-
-        .navbar-nav a.active {
-            color: #F7444E;
-        }
-
-        .navbar-collapse .navbar-nav li a:hover {
-            color: #F7444E;
-            transition: all .2s ease-in-out;
-        }
-
-        .navbar-collapse .navbar-nav li a:not(:hover) {
-            color: black;
-            transition: all .5s ease-in-out;
-        }
-
-        .navbar-nav .nav-item:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .navbar-nav .nav-item:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .navbar-nav .nav-item:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        .navbar-nav .nav-item:nth-child(4) {
-            animation-delay: 0.4s;
-        }
-
-        .navbar-nav .nav-item:nth-child(5) {
-            animation-delay: 0.5s;
-        }
-
-        .navbar-nav .nav-item:nth-child(6) {
-            animation-delay: 0.6s;
-        }
-
-        .navbar-nav .nav-item:nth-child(7) {
-            animation-delay: 0.7s;
-        }
-
-        .navbar-nav .nav-item:nth-child(8) {
-            animation-delay: 0.8s;
-        }
-
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .tab-menu {
-            display: none;
-        }
-
-        .containers{
-            margin-top: 5rem;
-        }
-        .post {
-            background-color: white;
-            margin-bottom: 20px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .post h2 {
-            margin-top: 0;
-        }
-
-        .post .date {
-            color: #777;
-            font-size: 0.9em;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -228,8 +72,42 @@
     </div>
 
     <footer>
-        <p>Blog của tôi - Tất cả quyền được bảo lưu</p>
-    </footer>
+        <div class="footer-column">
+          <div class="footer-column_flex">
+            <div class="footer-column_flex-1">
+              <h3>NIKE</h3>
+              <p><strong>Address: </strong>33 Vinh Vien,Q10,TP.HCM</p>
+              <p><strong>TELEPHONE: </strong>0764318308</p>
+              <p><strong>EMAIL: </strong>nghoanglan0311@gmail.com</p>
+            </div>
+            <div class="footer-column_flex-1">
+              <h3>MENU</h3>
+              <p>HOME</p>
+              <p>ABOUT</p>
+              <p>PRODUCT</p>
+              <p>BLOG</p>
+              <p>CONTACT</p>
+            </div>
+            <div class="footer-column_flex-1">
+              <h3>HELP</h3>
+              <p>Get Help</p>
+              <p>Delivery</p>
+              <p>Returns</p>
+            </div>
+            <div class="footer-column_flex-1">
+              <h3>NEWSLETTER</h1>
+              <P>Subcrible by our newsletter and get update prodtidin</P>
+              <div class="inputfleid">
+                <input class="email" type="email" placeholder="Enter Email">
+                <input class="submit" type="submit" value="Subcrible">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>@2025 All Right Reversed By Nhom 1</p>
+        </div>
+      </footer>
 </body>
 
 </html>
