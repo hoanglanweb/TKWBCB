@@ -34,10 +34,10 @@
                 <a href="#">HOME</a>
               </li>
               <li style="--1: 3" class="nav-item">
-                <a href="/TMDT/Product/About.html">ABOUT</a>
+                <a href="/TMDT/components/About.html">ABOUT</a>
               </li>
-              <li style="--1: 4" class="nav-item"><a href="/TMDT/Product/Products.html">PRODUCTS</a></li>
-              <li style="--1: 5" class="nav-item"><a href="/TMDT/Product/Blog.html">BLOG</a></li>
+              <li style="--1: 4" class="nav-item"><a href="/TMDT/components/Products.html">PRODUCTS</a></li>
+              <li style="--1: 5" class="nav-item"><a href="/TMDT/components/Blog.html">BLOG</a></li>
               <li style="--1: 6" class="nav-item"><a href="#">CONTACT</a></li>
               <li style="--1: 7" class="nav-item">
                 <a href="#" class="fa-solid fa-cart-shopping"></a>
@@ -113,7 +113,13 @@
       <div class="arrivals">
         <div class="column-arrivals">
           <div class="col-left_image">
-            <img src="/TMDT/assets/arrivals_1.webp" alt="" />
+            <div class="col-left_image-slider">
+              <img class="slide" src="/TMDT/assets/arrivals_1.webp" alt="" />
+              <img class="slide" src="/TMDT/assets/arrivals_2.png" alt="" />
+              <img class="slide" src="/TMDT/assets/arrivals_3.png" alt="" />
+            </div>
+            <button class="btn prev fa-solid fa-arrow-left" onclick="moveSlide(-1)"></button>
+            <button class="btn next fa-solid fa-arrow-right" onclick="moveSlide(1)"></button>
           </div>
           <div class="col-right_content">
             <h1>Nike Air Max 270</h1>
@@ -268,5 +274,6 @@
       </div>
     </footer>
 
+    <script src="/TMDT/js/index.js"></script>    
   </body>
 </html>
