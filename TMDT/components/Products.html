@@ -50,69 +50,43 @@
         </nav>
       </div>
     </header>
-    <div class="Product">
+
+    <div class="product">
       <div class="Product-column">
-        <div class="blur"></div>
-        <div class="Product-column_grid">
-          <div class="col">
-            <img src="/TMDT/assets/product-4.png" alt="" />
-            <div class="col-info">
-              <p>Nike air force 1'07</p>
-              <small class="price">3.500.000 VND</small>
-            </div>
-          </div>
-          <div class="col">
-            <img src="/TMDT/assets/product-3.png" alt="" />
-            <div class="col-info">
-              <p>Nike air force 1'07</p>
-              <small class="price">3.500.000 VND</small>
-            </div>
-          </div>
-          <div class="col">
-            <img src="/TMDT/assets/product-5.png" alt="" />
-            <div class="col-info">
-              <p>Nike air force 1'07</p>
-              <small class="price">2.456.888 VND</small>
-            </div>
-          </div>
-          <div class="col">
-            <img src="/TMDT/assets/product-10.png" alt="" />
-            <div class="col-info">
-              <p>Nike air force 1'07</p>
-              <small class="price">3.500.000 VND</small>
-            </div>
-          </div>
-          <div class="col">
-            <img src="/TMDT/assets/product-6.png" alt="" />
-            <div class="col-info">
-              <p>Nike air force 1'07</p>
-              <small class="price">3.500.000 VND</small>
-            </div>
-          </div>
-          <div class="col">
-            <img src="/TMDT/assets/product-7.png" alt="" />
-            <div class="col-info">
-              <p>Nike air force 1'07</p>
-              <small class="price">3.500.000 VND</small>
-            </div>
-          </div>
-          <div class="col">
-            <img src="/TMDT/assets/product-8.png" alt="" />
-            <div class="col-info">
-              <p>Nike air force 1'07</p>
-              <small class="price">3.500.000 VND</small>
-            </div>
-          </div>
-          <div class="col">
-            <img src="/TMDT/assets/product-9.png" alt="" />
-            <div class="col-info">
-              <p>Nike air force 1'07</p>
-              <small class="price">3.500.000 VND</small>
-            </div>
-          </div>
-        </div>
-      </div>
+         <div class="Product-column_grid">
+            <div id="Product"></div>
+         </div>
+       </div>
     </div>
+
+    <script>
+      const productlist = document.getElementById("Product");
+
+      fetch("/TMDT/Data/data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Du lieu Json", data);
+          data.Nike.forEach((product) => {
+            const productDiv = document.createElement("div");
+            productDiv.className = "product";
+            productDiv.innerHTML = `
+            <a href="/TMDT/components/Product-details.html?id=${product.id}">
+            <div class="col">
+              <img src="${product.thumbail}">
+              <div class="col-info">
+                <h2>${product.title}</h2>
+                <p>${product.Sex}</p>
+                <p><strong>${product.Price}</strong></p>
+              </div>
+              </div>
+              </a>
+            `;
+            productlist.appendChild(productDiv)
+          });
+        })
+        .catch((err) => console.error("loi khi load JSON", err));
+    </script>
+
     <footer>
         <div class="footer-column">
           <div class="footer-column_flex">
