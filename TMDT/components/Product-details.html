@@ -1,23 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi tiết sản phẩm</title>
-    <link rel="stylesheet" href="/TMDT/CSS/Product.css">
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/TMDT/CSS/Product-detail.css" />
+  </head>
+  <body>
+    
     <!--  vùng html ẩn,nó sẽ không hiển thị cho đến khi bạn chèn nó vào DOM -->
-    <template id="product-template"> 
-        <div class="product">
-            <img src="" alt="" class="image"> 
+
+    <template id="product-template">
+        <a href="/TMDT/components/Products.html" class="exit"><i class="fa-solid fa-arrow-left"></i></a>
+      <div class="product-layout_container">
+        <div class="product-layout_column">
+            <div class="product-layout_image">
+                <img src="" alt="" class="image" />
+            </div>
+            <div class="product-layout_content">
+                <div class="product-layout_textContent">
+                    <h1 class="title"></h1>
+                    <small class="shoes"></small>
+                </div>
+                <h3>Select Size</h3>
+                <div class="product-layout_sizeContent" id="size-list">
+
+                </div>
+                <div class="product-layout_content-btn">
+                    <button>Add to Bag</button>
+                    <button><a href="#" class="fa-regular fa-heart"></a></button>
+                </div>
+                <div class="product-layout_content-info">
+                    <p>Comfortable, durable and timeless—it's number one for a reason. 
+                        The classic '80s construction pairs smooth leather 
+                        with bold details 
+                        for style that tracks whether 
+                        you're on court or on the go.
+                    </p>
+                    <ul>
+                        <li>Colour Shown: White/White</li>
+                        <li>Style: CW2288-111</li>
+                        <li>Country/Region of Origin: India, Vietnam</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+      </div>
     </template>
-    
-    <div id="product-detail"></div>
-    
-    
+
+    <!-- ********************************************************************************** -->
+
+
+    <header>
+        <div class="container">
+          <nav class="navbar">
+            <a style="--1: 1" href="#" class="nav-item nav-bars">
+              <img src="/TMDT/assets/Logo_nike.png" alt="" />
+            </a>
+            <div class="navbar-collapse">
+              <ul class="navbar-nav">
+                <li style="--1: 2" class="nav-link nav-item active">
+                  <a href="#">HOME</a>
+                </li>
+                <li style="--1: 3" class="nav-item">
+                  <a href="/TMDT/components/About.html">ABOUT</a>
+                </li>
+                <li style="--1: 4" class="nav-item"><a href="/TMDT/components/Products.html">PRODUCTS</a></li>
+                <li style="--1: 5" class="nav-item"><a href="/TMDT/components/Blog.html">BLOG</a></li>
+                <li style="--1: 6" class="nav-item"><a href="#">CONTACT</a></li>
+                <li style="--1: 7" class="nav-item">
+                  <a href="#" class="fa-solid fa-cart-shopping"></a>
+                </li>
+                <li style="--1: 8" class="nav-item search">
+                  <a href="#" class="fa-solid fa-magnifying-glass"></a>
+                </li> 
+                <li style="--1: 8" class="nav-item search">
+                  <a href="#" class="fa-solid fa-user"></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Bars -->
+            <div class="tab-menu">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <!-- ************ -->
+          </nav>
+        </div>
+  
+  
+      </header>
+      
+        <div id="product-detail"></div>
+
+    <footer>
+        <div class="footer-column">
+          <div class="footer-column_flex">
+            <div class="footer-column_flex-1">
+              <h3>NIKE</h3>
+              <p><strong>Address: </strong>33 Vinh Vien,Q10,TP.HCM</p>
+              <p><strong>TELEPHONE: </strong>0764318308</p>
+              <p><strong>EMAIL: </strong>nghoanglan0311@gmail.com</p>
+            </div>
+            <div class="footer-column_flex-1">
+              <h3>MENU</h3>
+              <p>HOME</p>
+              <p>ABOUT</p>
+              <p>PRODUCT</p>
+              <p>BLOG</p>
+              <p>CONTACT</p>
+            </div>
+            <div class="footer-column_flex-1">
+              <h3>HELP</h3>
+              <p>Get Help</p>
+              <p>Delivery</p>
+              <p>Returns</p>
+            </div>
+            <div class="footer-column_flex-1">
+              <h3>NEWSLETTER</h1>
+              <P>Subcrible by our newsletter and get update prodtidin</P>
+              <div class="inputfleid">
+                <input class="email" type="email" placeholder="Enter Email">
+                <input class="submit" type="submit" value="Subcrible">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>@2025 All Right Reversed By Nhom 1</p>
+        </div>
+      </footer>
     <script src="/TMDT/js/detail.js"></script>
-</body>
+    <script src="/TMDT/js/selectsize.js"></script>
+  </body>
 </html>

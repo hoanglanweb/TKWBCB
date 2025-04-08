@@ -1,18 +1,17 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  
+
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
 header {
-  position: sticky;
+  position: relative;
   top: 0px;
   width: 100%;
   background: #fff;
@@ -46,7 +45,7 @@ header {
   align-items: center;
   width: 650px;
   padding: 0.75rem 1rem;
-  
+
   & .nav-item {
     opacity: 0;
     transform: translateY(-50px);
@@ -59,7 +58,7 @@ header {
   font-weight: 600;
   color: #000;
   transition: all 0.2s ease-in-out;
-  
+
   & i {
     color: #000;
   }
@@ -121,18 +120,18 @@ footer {
   background: #757f9a;
   background: -webkit-linear-gradient(to right, #d7dde8, #a2abc2);
   background: linear-gradient(to right, #d7dde8, #9aa6c5);
-  
+
   & .footer-column {
     margin-top: 7rem;
 
     & .footer-column_flex {
       display: flex;
       justify-content: space-around;
-      
+
       & .footer-column_flex-1 {
         padding: 1rem 2rem;
         margin-top: 5rem;
-        
+
         & p {
           margin: 15px 0 15px 0;
           cursor: pointer;
@@ -143,7 +142,7 @@ footer {
           font-size: 1.2rem;
           cursor: pointer;
         }
-        
+
         & .inputfleid {
           & .email {
             padding: 15px 25px 15px 25px;
@@ -156,7 +155,7 @@ footer {
       }
     }
   }
-  
+
   & .copyright {
     background-color: #fff;
     margin-top: 5rem;
@@ -167,81 +166,141 @@ footer {
   }
 }
 
+/************************ product-details.html ***********************/
 
-.product {
-  margin-top: 2.5rem;
-  /* height: 100vh; */
+.product-layout_container {
+  margin-top: 3.5rem;
 
-    & button {
-      outline: auto;
-      border: none;
-      border-radius: 50px;
-      padding: 0.75rem 2rem;
-      cursor: pointer;
-      width: 150px;
-      background: #fff;
-    }
-    & button:hover {
-      transition: all 0.3s ease-in-out;
-      background: #ccc;
-    }
-    & button:not(:hover) {
-      transition: all 0.3s ease-in-out;
-      background: #fff;
-    }
-    & .Product-column {
-      max-width: 1200px;
-      margin: auto;
-  
-      & h1 {
-        text-align: center;
+  & .product-layout_column {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    overflow: visible;
+
+    & .product-layout_image {
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      width: 650px;
+
+      & img {
+        width: 100%;
       }
-      & .Product-column_grid {
-  
-        & #Product{
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1.5rem;
-          /* margin-top: 1rem; */
+    }
+
+    & .product-layout_content {
+      max-width: 450px;
+      flex: 1;
+
+      & .product-layout_textContent {
+        margin: 1rem 0 1rem 0;
+
+        & h1 {
+          font-weight: 500;
+          padding: 1rem 0 0.5rem 0;
         }
-  
-        & .col {
-          max-width: 650px;
-          margin: auto;
-          background: #fff;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        & small {
+          font-size: 16px;
+          color: grey;
+        }
+      }
+      & .product-layout_sizeContent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+
+        & p {
+          display: inline-block;
+          background-color: #fff;
+          padding: 1rem 2rem;
+          border: 1px solid #000;
           cursor: pointer;
-          transition: all 0.3s ease-in-out;
-  
-          & img {
-            width: 100%;
-          }
-  
-          & .col-info {
-            padding: 5px 10px;
-  
-            & p {
-              margin-top: 0.75rem;
-              margin-bottom: 0.5rem;
-              font-size: 1rem;
-              color: #000;
-            }
-  
-            & h2{
-              font-size: 1.25rem;
-              font-weight: 500;
-              color: #000;
-            }
-  
-            & .text{
-              color: gray;
-            }
-          }
+          transition: background-color 0.3s ease;
+          text-align: center;
+          font-weight: 500;
         }
-        & .col:hover {
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-            rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        & p:hover {
+          background-color: #f1f1f1;
+          border-color: #888;
+        }
+
+        & p.selected {
+          background-color: #000;
+          color: #fff;
         }
       }
+
+      & .product-layout_content-btn {
+        display: flex;
+        gap: 1rem; /* Add space between buttons */
+        margin-top: 3rem;
+
+        & button {
+          background-color: #000; /* Black background for buttons */
+          color: #fff; /* White text */
+          padding: 0.8rem 1.5rem; /* Adjust padding for better button size */
+          border: none;
+          border-radius: 50px; /* Rounded corners */
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+
+          & a {
+            color: #fff;
+          }
+        }
+      }
+      .product-layout_content-btn button:hover {
+        background-color: #333; /* Darken background on hover */
+      }
+
+      .product-layout_content-btn button:active {
+        transform: scale(0.98); /* Slightly shrink the button on click */
+      }
+      .product-layout_content-info {
+        margin-top: 1.5rem;
+      }
+
+      .product-layout_content-info p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6; /* Add some space between lines */
+        margin-bottom: 1rem;
+      }
+
+      .product-layout_content-info ul {
+        list-style-type: none; /* Remove default bullets */
+        padding: 0;
+        margin: 0;
+      }
+
+      .product-layout_content-info ul li {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 0.5rem;
+      }
+
+      .product-layout_content-info ul li::before {
+        content: "•"; /* Custom bullet style */
+        color: #000;
+        font-weight: bold;
+        margin-right: 10px; /* Space between bullet and text */
+      }
     }
+  }
+}
+
+.exit {
+  padding: 10px;
+  margin-top: 20rem;
+  position: absolute;
+  top: -200px;
+  left: 70px;
+
+  & i{
+    font-size: 2rem;
+  }
 }

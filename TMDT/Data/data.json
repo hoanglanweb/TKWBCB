@@ -5,35 +5,40 @@
       "thumbail": "/TMDT/assets/product-4.png",
       "title": "Nike Air Force 1 Dance",
       "Sex": "Women's Shoes",
-      "Price": "205$"
+      "Price": "205$",
+      "sizes":[37,38,39,40,41,42,43,44,45]
     },
     {
       "id": 2,
       "thumbail": "/TMDT/assets/product-3.png",
       "title": "Nike Force 1 Low EasyOn",
       "Sex": "Younger Kids' Shoes",
-      "Price": "200$"
+      "Price": "200$",
+      "sizes":[37,38,39,40,41,42,43,44,45]
     },
     {
       "id": 3,
       "thumbail": "/TMDT/assets/product-5.png",
       "title": "Nike Air Force 1'07",
       "Sex": "Men's Shoes",
-      "Price": "200$"
+      "Price": "200$",
+      "sizes":[37,38,39,40,41,42,43,44,45]
     },
     {
       "id": 4,
       "thumbail": "/TMDT/assets/product-6.png",
       "title": "Zion 4 PF",
       "Sex": "Basketball Shoes",
-      "Price": "200$"
+      "Price": "200$",
+      "sizes":[37,38,39,40,41,42,43,44,45]
     },
     {
       "id": 5,
       "thumbail": "/TMDT/assets/product-7.png",
       "title": "Air Jordan 1 Mid",
       "Sex": "Men's Shoes",
-      "Price": "200$"
+      "Price": "200$",
+      "sizes":[37,38,39,40,41,42,43,44,45]
     }
     ,
     {
@@ -41,7 +46,8 @@
       "thumbail": "/TMDT/assets/product-8.png",
       "title": "Jordan Spizike Low",
       "Sex": "Men's Shoes",
-      "Price": "200$"
+      "Price": "200$",
+      "sizes":[37,38,39,40,41,42,43,44,45]
     }
     ,
     {
@@ -49,14 +55,16 @@
       "thumbail": "/TMDT/assets/product-9.png",
       "title": "Nike Phantom GX 2 Elite Electric",
       "Sex": "FG Low-Top Football Boot",
-      "Price": "200$"
+      "Price": "200$",
+      "sizes":[37,38,39,40,41,42,43,44,45]
     },
     {
       "id": 8,
       "thumbail": "/TMDT/assets/product-10.png",
       "title": "Nike Full Force Low",
       "Sex": "Older Kids' Shoes",
-      "Price": "200$"
+      "Price": "200$",
+      "sizes":[37,38,39,40,41,42,43,44,45]
     }
   ]
 }
