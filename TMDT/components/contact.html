@@ -3,59 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chi tiết sản phẩm</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
     rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
-    <link rel="stylesheet" href="/TMDT/CSS/Product-detail.css" />
+    <link rel="stylesheet" href="/TMDT/CSS/Header.css">
+    <link rel="stylesheet" href="/TMDT/CSS/Product.css">
+    <title>Document</title>
   </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .contact-info {
+      margin-top: 30px;
+    }
+  </style>
   <body>
-    
-    <!--  vùng html ẩn,nó sẽ không hiển thị cho đến khi bạn chèn nó vào DOM -->
-
-    <template id="product-template">
-        <a href="/TMDT/components/Products.html" class="exit"><i class="fa-solid fa-arrow-left"></i></a>
-      <div class="product-layout_container">
-        <div class="product-layout_column">
-            <div class="product-layout_image">
-                <img src="" alt="" class="image" />
-            </div>
-            <div class="product-layout_content">
-                <div class="product-layout_textContent">
-                    <h1 class="title"></h1>
-                    <small class="shoes"></small>
-                </div>
-                <h3>Select Size</h3>
-                <div class="product-layout_sizeContent" id="size-list">
-
-                </div>
-                <div class="product-layout_content-btn">
-                    <button onclick="clickAlert()">Add to Bag</button>
-                    <button><a href="#" class="fa-regular fa-heart"></a></button>
-                </div>
-                <div class="product-layout_content-info">
-                    <p>Comfortable, durable and timeless—it's number one for a reason. 
-                        The classic '80s construction pairs smooth leather 
-                        with bold details 
-                        for style that tracks whether 
-                        you're on court or on the go.
-                    </p>
-                    <ul>
-                        <li>Colour Shown: White/White</li>
-                        <li>Style: CW2288-111</li>
-                        <li>Country/Region of Origin: India, Vietnam</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-      </div>
-    </template>
-
-    <!-- ********************************************************************************** -->
-
-
     <header>
         <div class="container">
           <nav class="navbar">
@@ -72,7 +78,7 @@
                 </li>
                 <li style="--1: 4" class="nav-item"><a href="/TMDT/components/Products.html">PRODUCTS</a></li>
                 <li style="--1: 5" class="nav-item"><a href="/TMDT/components/Blog.html">BLOG</a></li>
-                <li style="--1: 6" class="nav-item"><a href="#">CONTACT</a></li>
+                <li style="--1: 6" class="nav-item"><a href="/TMDT/components/contact.html">CONTACT</a></li>
                 <li style="--1: 7" class="nav-item">
                   <a href="#" class="fa-solid fa-cart-shopping"></a>
                 </li>
@@ -94,9 +100,35 @@
   
   
       </header>
-      
-        <div id="product-detail"></div>
+    <section>
+      <h2>Gửi thông tin cho chúng tôi</h2>
+      <form action="/submit-contact" method="POST">
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name" required />
 
+        <label for="phone">Số điện thoại:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Nội dung:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Gửi đi</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Thông tin liên hệ khác:</h3>
+        <p><strong>Địa chỉ:</strong> 33 đường vĩnh viễn. quận 10.TPHCM</p>
+        <p><strong>Số điện thoại:</strong> (09) 19855172</p>
+        <p><strong>Email:</strong> lotv2006@gmail.com</p>
+        <p>
+          <strong>Giờ làm việc:</strong> Thứ Hai đến Thứ Sáu, từ 9:00 sáng đến
+          6:00 chiều
+        </p>
+      </div>
+    </section>
     <footer>
         <div class="footer-column">
           <div class="footer-column_flex">
@@ -134,7 +166,5 @@
           <p>@2025 All Right Reversed By Nhom 1</p>
         </div>
       </footer>
-    <script src="/TMDT/js/detail.js"></script>
-    <script src="/TMDT/js/selectsize.js"></script>
   </body>
 </html>
