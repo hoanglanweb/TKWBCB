@@ -1,195 +1,299 @@
 <!DOCTYPE html>
-
-<html lang="vi">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Thông Tin Nhóm</title>
-
-    <style>
-        .body {
-
-            width: 100%;
-
-            height: 300px;
-
-            background-color: #e9edf6;
-
-        }
-
-        .circle-img {
-
-            width: 200px;
-            /* Điều chỉnh kích thước của ảnh */
-
-            height: 200px;
-            /* Điều chỉnh kích thước của ảnh */
-
-            border-radius: 50%;
-            /* Tạo hiệu ứng hình tròn */
-
-            object-fit: cover;
-            /* Cắt ảnh sao cho phù hợp với hình tròn */
-
-        }
-
-        .content {
-
-            display: flex;
-
-            justify-content: space-around;
-
-            align-items: center;
-
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <header style="height: 20%;">
-
-        <table width="100%" border="0">
-
-            <tr>
-
-                <!-- Cột bên trái -->
-
-                <td width="20%" align="center" valign="top">
-
-                    <section>
-
-                        <h3 style="text-align: center;">ỦY BAN NHÂN DÂN TPHCM</h3>
-
-                        <h3>SỞ GIÁO DỤC VÀ ĐÀO TẠO</h4>
-
-                            <h3>Trường CAO ĐẲNG KINH TẾ HCM</h4>
-
-                                <img src="https://cdn.haitrieu.com/wp-content/uploads/2023/01/Logo-Truong-Cao-dang-Kinh-te-TP.HCM_.png"
-                                    alt="Logo" width="100" height="100">
-
-                    </section>
-
-                </td>
-
-                <!-- cột giữa -->
-
-                <td width="60%" align="center">
-
-
-                </td>
-
-                <!-- Cột bên phải -->
-
-                <td width="20%" align="left" valign="top">
-
-                    <section>
-
-                        <h3>GIẢNG VIÊN HƯỚNG DẪN</h3>
-
-                        <p><strong>Th.s PHẠM ĐĂNG PHƯƠNG</strong></p>
-
-                        <h4>Nhóm 1:</h4>
-
-                        <div width: 30%;">
-
-                            <UL>
-
-                                <li>Nguyễn Hoàng Lân</li>
-
-                                <li>Huỳnh Văn Phước Lợi</li>
-
-                                <li>Lê Đức Lộc</li>
-
-                                <li>Võ Công Tin Tưởng</li>
-
-                                <li>Appolo</li>
-
-                            </UL>
-
-                        </div>
-
-
-                    </section>
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </header>
-
-    <nav style="background-color: #e9edf5; height: 10%;">
-
-        <table width="100%">
-            <tr>
-                <td width="4%" align="center"> <a href="/TMDT/Index.html" width="5px">Trang Chủ</a></td>
-
-                <td width="4%" align="center"> <a href="#about" width="5px">Giới Thiệu</a></td>
-
-                <td width="4%" align="center"><a href="#services" width="5px">Dịch Vụ</a></td>
-
-                <td width="4%" align="center"><a href="#contact" width="5px">Liên Hệ</a></td>
-
-                <td width="4%" align="center"><a href="#menu" width="5px">Menu</a></td>
-
-                <td width="80%" align="right">
-                    <form> <input type="text" placeholder="tim kiem tai day" name="tim kiem">
-
-                        <button type="submit">Tim kiem</button>
-
-                    </form>
-                </td>
-
-
-            </tr>
-
-        </table>
-
-    </nav>
-
-    <main class="body">
-
-        <div class="content">
-
-            <div>
-
-                <h1 style="text-align: center; color: rgb(122, 132, 223);"><b>NICE</b></h1>
-
-                <img src="https://censor.vn/wp-content/uploads/2022/02/cac-mau-giay-nike-2-1085x800.jpg"
-                    alt="Hình ảnh hình tròn" class="circle-img">
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="/TMDT/CSS/Header.css">
+    <link rel="stylesheet" href="/TMDT/CSS/Product.css">
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "Quicksand", sans-serif;
+      background-color: #f9f9f9;
+    }
+    .about-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+    .about-section h1,
+    .about-section h2 {
+      color: #f7444e;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .about-section p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .about-section ul {
+      margin-left: 20px;
+      line-height: 1.8;
+      color: #333;
+    }
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .member {
+      background-color: #f2f2f2;
+      padding: 15px 20px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      box-shadow:0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .member strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: #222;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta a {
+      background-color: #f7444e;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #c7323b;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #555;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+
+  <body>
+
+    <header>
+        <div class="container">
+          <nav class="navbar">
+            <a style="--1: 1" href="#" class="nav-item nav-bars">
+              <img src="/TMDT/assets/Logo_nike.png" alt="" />
+            </a>
+            <div class="navbar-collapse">
+              <ul class="navbar-nav">
+                <li style="--1: 2" class="nav-link nav-item active">
+                  <a href="/TMDT/Index.html">HOME</a>
+                </li>
+                <li style="--1: 3" class="nav-item">
+                  <a href="/TMDT/components/About.html">ABOUT</a>
+                </li>
+                <li style="--1: 4" class="nav-item"><a href="/TMDT/components/Products.html">PRODUCTS</a></li>
+                <li style="--1: 5" class="nav-item"><a href="/TMDT/components/Blog.html">BLOG</a></li>
+                <li style="--1: 6" class="nav-item"><a href="/TMDT/components/contact.html">CONTACT</a></li>
+                <li style="--1: 7" class="nav-item">
+                  <a href="#" class="fa-solid fa-cart-shopping"></a>
+                </li>
+                <li style="--1: 8" class="nav-item search">
+                  <a href="#" class="fa-solid fa-magnifying-glass"></a>
+                </li> 
+                <li style="--1: 8" class="nav-item search">
+                  <a href="#" class="fa-solid fa-user"></a>
+                </li>
+              </ul>
             </div>
-
-            <div>
-
-                <h1 style="text-align: center; color: rgb(122, 132, 223);"><b>NICE</b></h1>
-
-                <img src="https://censor.vn/wp-content/uploads/2022/02/cac-mau-giay-nike-2-1085x800.jpg"
-                    alt="Hình ảnh hình tròn" class="circle-img">
-
+            <!-- Bars -->
+            <div class="tab-menu">
+              <i class="fa-solid fa-bars"></i>
             </div>
+            <!-- ************ -->
+          </nav>
+        </div>
+  
+  
+      </header>
 
-            <div>
+    <!-- ABOUT CONTENT -->
+  <section class="about-section">
+    <h1>Về Chúng Tôi</h1>
+    <h2>Thương hiệu và Mục tiêu</h2>
+    <p> Dự án website thương mại điện tử được phát triển với mục tiêu mô phỏng 
+        một cửa hàng giày thể thao thương hiệu Nike, 
+        mang đến trải nghiệm người dùng hiện đại, đơn giản và thực tế.
+    </p>
+    <p>
 
-                <h1 style="text-align: center; color: rgb(122, 132, 223);"><b>NICE</b></h1>
-
-                <img src="https://censor.vn/wp-content/uploads/2022/02/cac-mau-giay-nike-2-1085x800.jpg"
-                    alt="Hình ảnh hình tròn" class="circle-img">
-
-            </div>
+        Chúng tôi lựa chọn Nike bởi vì đó là thương hiệu toàn cầu, biểu tượng của năng động, sáng tạo và vượt giới hạn — đúng với tinh thần của nhóm sinh viên trẻ đang học hỏi và phát triển.
+  
+      </p>
+  
+      <p>
+  
+        <strong>Tầm nhìn:</strong> Trở thành nền tảng mô phỏng thương mại điện tử học thuật chuyên nghiệp.  
+  
+        <br />
+  
+        <strong>Sứ mệnh:</strong> Tạo ra sản phẩm thực hành kết nối công nghệ, thiết kế và kinh doanh cho sinh viên.
+  
+      </p>
+  
+      <p>
+  
+        <strong>Giá trị cốt lõi:</strong> Tin cậy – Đổi mới – Hợp tác – Học tập
+  
+      </p>
+  
+      <h2>Hành Trình Phát Triển</h2>
+  
+      <p>
+  
+        Dự án được thực hiện trong khuôn khổ môn học Thương Mại Điện Tử, dưới sự hướng dẫn của ThS. Phạm Đăng Phương.
+  
+      </p>
+  
+      <p>
+  
+        Nhóm đã trải qua 4 giai đoạn: 
+  
+        <br />
+  
+        – Lên ý tưởng  
+  
+        <br />
+  
+        – Phân chia công việc  
+  
+        <br />
+  
+        – Thiết kế giao diện  
+  
+        <br />
+  
+         Xây dựng và thử nghiệm trang web
+  
+      </p>
+  
+      <p>
+        Các công cụ được sử dụng bao gồm: HTML, CSS, FontAwesome, Visual Studio Code, GitHub, và tư duy nhóm chủ động.
+      </p>
+      <h2>Phân chia công việc</h2>
+      <p>
+        Dự án được phân chia rõ ràng theo từng mảng công việc, mỗi thành viên đảm nhận một phần thế mạnh để đảm bảo hiệu quả:
+      </p>
+      <ul>
+        <li><strong>Nguyễn Hoàng Lân:</strong> Nhóm trưởng, lập kế hoạch, kiểm soát tiến độ và viết giao diện chính.</li>
+        <li><strong>Huỳnh Văn Phước Lợi:</strong> Xây dựng và chỉnh sửa phần Blog.</li>
+        <li><strong>Lê Đức Lộc:</strong> Cùng thực hiện nội dung và giao diện Blog.</li>
+        <li><strong>Võ Công Tin Tưởng:</strong> Phát triển nội dung và trình bày trang About.</li>
+        <li><strong>Appolo:</strong> Thiết kế và xây dựng trang Liên hệ (Contact).</li> 
+      </ul>
+      <h2>Thành viên Nhóm 1</h2>
+      <div class="team-members">
+        <div class="member">
+          <strong>Nguyễn Hoàng Lân</strong>
+          Nhóm trưởng
+        </div>
+        <div class="member">
+          <strong>Huỳnh Văn Phước Lợi</strong>
+          Thành viên
 
         </div>
+  
+        <div class="member">
+  
+          <strong>Lê Đức Lộc</strong>
+  
+          Thành viên
+  
+        </div>
+  
+        <div class="member">
+  
+          <strong>Võ Công Tin Tưởng</strong>
+  
+          Thành viên
+  
+        </div>
+  
+        <div class="member">
+  
+          <strong>Appolo</strong>
+  
+          Thành viên
+  
+        </div>
+  
+      </div>
+  
+      <div class="cta">
+  
+        <a href="/TMDT/components/Products.html">Khám phá sản phẩm</a>
+  
+      </div>
+  
+      <div class="quote">
+        “Cảm ơn thầy Phương và các bạn đã đồng hành cùng nhóm trong quá trình hoàn thành dự án này.”
+      </div>
+    </section>
 
-
-    </main>
-
-</body>
-
+    <footer>
+        <div class="footer-column">
+          <div class="footer-column_flex">
+            <div class="footer-column_flex-1">
+              <h3>NIKE</h3>
+              <p><strong>Address: </strong>33 Vinh Vien,Q10,TP.HCM</p>
+              <p><strong>TELEPHONE: </strong>0764318308</p>
+              <p><strong>EMAIL: </strong>nghoanglan0311@gmail.com</p>
+            </div>
+            <div class="footer-column_flex-1">
+              <h3>MENU</h3>
+              <p>HOME</p>
+              <p>ABOUT</p>
+              <p>PRODUCT</p>
+              <p>BLOG</p>
+              <p>CONTACT</p>
+            </div>
+            <div class="footer-column_flex-1">
+              <h3>HELP</h3>
+              <p>Get Help</p>
+              <p>Delivery</p>
+              <p>Returns</p>
+            </div>
+            <div class="footer-column_flex-1">
+              <h3>NEWSLETTER</h1>
+              <P>Subcrible by our newsletter and get update prodtidin</P>
+              <div class="inputfleid">
+                <input class="email" type="email" placeholder="Enter Email">
+                <input class="submit" type="submit" value="Subcrible">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>@2025 All Right Reversed By Nhom 1</p>
+        </div>
+      </footer>
+  </body>
 </html>
