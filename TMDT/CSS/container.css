@@ -11,6 +11,9 @@
     font-style: normal;
 
 }
+#detail{
+    position: relative;
+}
 header{
     position: sticky;
     top: 0px;
@@ -117,6 +120,51 @@ header{
 .tab-menu{
     display: none;
 }
+
+
+
+.school{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.school-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.school-info h3{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.school-info .right{
+    margin: auto;
+}
+
+.teacher-info{
+    margin-top: 1rem;
+}
+.teacher-info h3{
+    font-size: 1.3rem;
+}
+.teacher-info p strong{
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.teacher-info h4{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.teacher-info ul li{
+    list-style: disc;
+    margin-left: 2rem;
+}
+
+
 
 footer {
     height: 75vh;
